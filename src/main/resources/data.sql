@@ -1,4 +1,20 @@
-INSERT INTO RECORD (NAME, DESCRIPTION, COST, TOTAL_STOCK, OWNED)
-VALUES
-('Record 1', 'Description for Record 1', 100, 500, 50),
-('Record 2', 'Description for Record 2', 200, 1000, 100);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (1, 'TechNova Solutions', 'A cutting-edge technology company specializing in innovative software solutions.', 130, 1114, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (2, 'GreenEarth Landscaping', 'Providing eco-friendly landscaping services to create beautiful outdoor spaces.', 163, 3151, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (3, 'Swift Courier Services', 'Fast and reliable courier services for businesses and individuals.', 398, 1892, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (4, 'Golden Spoon Catering', 'Delicious catering services for weddings, parties, and corporate events.', 489, 3074, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (5, 'Urban Chic Boutique', 'Trendy clothing and accessories for the modern fashion enthusiast.', 380, 1238, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (6, 'Silverline Financial', 'Offering expert financial planning and investment management services.', 465, 2957, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (7, 'PureGlow Cosmetics', 'High-quality skincare and beauty products for radiant skin.', 161, 4958, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (8, 'Sunrise Fitness Studio', 'A community-focused fitness center with state-of-the-art equipment.', 441, 2201, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (9, 'BlueWave Consulting', 'Providing strategic business consulting and growth solutions.', 355, 2685, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (10, 'Sparkle Cleaning Services', 'Affordable and thorough residential and commercial cleaning services.', 69, 1933, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (11, 'EcoEnergy Systems', 'Renewable energy solutions for a sustainable future.', 427, 3528, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (12, 'Bright Minds Academy', 'A private educational institution focusing on STEM subjects.', 351, 4833, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (13, 'Apex Auto Repairs', 'Comprehensive auto repair services with a focus on customer satisfaction.', 474, 3371, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (14, 'Harmony Yoga Studio', 'A tranquil space for yoga, meditation, and mindfulness practices.', 208, 4858, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (15, 'ChocoDelight Confectionery', 'Handmade chocolates and desserts for every occasion.', 232, 3808, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (16, 'Elite Event Planners', 'Professional event planning and management for memorable experiences.', 460, 2941, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (17, 'Timeless Treasures Antiques', 'Unique antique items and vintage collectibles for enthusiasts.', 225, 2206, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (18, 'OceanBreeze Travel Agency', 'Tailored travel planning for exotic vacations and business trips.', 496, 3568, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (19, 'FreshHarvest Grocers', 'Organic and locally sourced grocery items for healthy living.', 424, 3905, 0);
+INSERT INTO Record (id, name, description, cost, total_Stock, owned) VALUES (20, 'Golden Horizon Realtors', 'Connecting buyers and sellers in the real estate market.', 68, 1186, 0);

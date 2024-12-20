@@ -39,7 +39,19 @@ public class Record {
     }
 
     public void setOwned(int owned) {
-        this.owned = owned;
+        int maxTotal = Math.min(this.totalStock, owned);
+        int minTotal = Math.max(0, maxTotal);
+        int difference = minTotal - this.owned;
+        System.out.println(difference);
+        int minimum = 10;
+        if(this.cost + difference * this.cost/this.totalStock > minimum) {
+            this.cost += difference * this.cost / this.totalStock;
+        }
+        else {
+            minimum = Math.max(minimum, this.cost / 2);
+            this.cost = minimum;
+        }
+        this.owned += difference;
     }
 
     // Getter and setter methods for the existing fields

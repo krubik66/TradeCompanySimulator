@@ -19,9 +19,10 @@ public class RecordService {
     }
 
     // Method to update the 'owned' field of a specific record
-    public void updateOwned(int id, int owned) {
+    public Record updateOwned(int id, int owned) {
         Record record = recordRepository.findById(id).orElseThrow(() -> new RuntimeException("Record not found"));
         record.setOwned(owned); // Update the owned field
         recordRepository.save(record); // Save the updated record back to the database
+        return record;
     }
 }
