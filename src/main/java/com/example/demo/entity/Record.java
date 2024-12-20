@@ -1,34 +1,56 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Record {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    private int id;
     private String name;
     private String description;
+    private int cost;
+    private int totalStock;
+    private int owned;
 
+    // Default constructor
     public Record() {}
 
-    public Record(String name, String description) {
-        this.name = name;
-        this.description = description;
+    // Getter and setter methods for the new fields
+
+    public int getCost() {
+        return cost;
     }
 
-    // Getters and Setters
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
 
-    public Long getId() {
+    public int getTotalStock() {
+        return totalStock;
+    }
+
+    public void setTotalStock(int totalStock) {
+        this.totalStock = totalStock;
+    }
+
+    public int getOwned() {
+        return owned;
+    }
+
+    public void setOwned(int owned) {
+        this.owned = owned;
+    }
+
+    // Getter and setter methods for the existing fields
+
+    public int getId() {
         return id;
     }
 
-    // No setter for 'id' as it's auto-generated
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
