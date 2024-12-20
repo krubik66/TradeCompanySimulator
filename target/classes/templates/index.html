@@ -24,15 +24,18 @@
   <tbody>
   <!-- Dynamically load records using Thymeleaf -->
   <tr th:each="record : ${records}">
-    <td th:text="${record.id}"></td>
-    <td th:text="${record.name}"></td>
-    <td th:text="${record.description}"></td>
-    <td th:text="${record.cost}"></td>
-    <td th:text="${record.totalStock}"></td>
+    <td th:id="|id-${record.id}" th:text="${record.id}"></td>
+    <td th:id="|name-${record.id}" th:text="${record.name}"></td>
+    <td th:id="|description-${record.id}" th:text="${record.description}"></td>
+    <td th:id="|cost-${record.id}" th:text="${record.cost}"></td>
+    <td th:id="|totalStock-${record.id}" th:text="${record.totalStock}"></td>
     <td th:id="|owned-${record.id}" th:text="${record.owned}"></td>
     <td>
-      <button onclick="updateOwned(1, 'increase')">Increase Owned</button>
-      <button onclick="updateOwned(1, 'decrease')">Decrease Owned</button>
+      <label>
+        <input type="number" th:id="|quantity-${record.id}|" min="1" value="1">
+      </label>
+      <button th:onclick="|updateOwned(${record.id}, 'increase')|">Buy</button>
+      <button th:onclick="|updateOwned(${record.id}, 'decrease')|">Sell</button>
     </td>
   </tr>
   </tbody>

@@ -119,3 +119,13 @@ td button {
         font-size: 2rem;
     }
 }
+
+input[type="number"] {
+  width: 60px; /* Set the width of the input field */
+  height: 30px; /* Set the height of the input field */
+  padding: 5px; /* Add some padding inside the input field */
+  font-size: 14px; /* Adjust the font size */
+  border: 1px solid #4caf50; /* Add a green border */
+  border-radius: 4px; /* Add rounded corners */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}

@@ -3,6 +3,8 @@ package com.example.demo.controller;
 import com.example.demo.entity.Record;
 import com.example.demo.service.RecordService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +29,9 @@ public class RecordController {
 
     // Method to update the 'owned' field of a record
     @PostMapping("/updateOwned/{id}/{owned}")
-    public String updateOwned(@PathVariable("id") int id, @PathVariable("owned") int owned) {
-        recordService.updateOwned(id, owned);
-        return "redirect:/"; // Redirect back to the homepage to refresh the data
+    public ResponseEntity<Record> updateOwned(@PathVariable("id") int id, @PathVariable("owned") int owned) {
+        Record record = recordService.updateOwned(id, owned);
+
+        return new ResponseEntity<>(record, HttpStatus.OK); // Redirect back to the homepage to refresh the data
     }
 }
