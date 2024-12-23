@@ -62,3 +62,32 @@ function updateOwned(recordId, action) {
         alert('Error updating the record');
     });
 }
+
+function updateDisplayNumber() {
+    const newValue = document.getElementById('new-value').value;
+    if (!newValue) {
+        alert('Please enter a valid number');
+        return;
+    }
+
+    fetch(`/setDisplayNumber?number=${newValue}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to update the number');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        document.getElementById('display-number').textContent = data;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to update the number');
+    });
+}
