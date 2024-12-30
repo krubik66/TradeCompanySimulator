@@ -39,7 +39,11 @@ public class Record {
     }
 
     public void setOwned(int owned) {
-        int maxTotal = Math.min(this.totalStock, owned);
+        this.owned = owned;
+    }
+
+    public void buySome(int howMuch) {
+        int maxTotal = Math.min(this.totalStock, howMuch);
         int minTotal = Math.max(0, maxTotal);
         int difference = minTotal - this.owned;
         System.out.println(difference);

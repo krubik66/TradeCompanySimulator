@@ -31,7 +31,7 @@ public class RecordController {
     // Method to update the 'owned' field of a record
     @PostMapping("/updateOwned/{id}/{owned}")
     public ResponseEntity<Record> updateOwned(@PathVariable("id") int id, @PathVariable("owned") int owned) {
-        Record record = recordService.updateOwned(id, owned);
+        Record record = recordService.updateOwned(id, owned, this.displayNumber);
 
         return new ResponseEntity<>(record, HttpStatus.OK); // Redirect back to the homepage to refresh the data
     }
