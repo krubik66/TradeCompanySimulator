@@ -18,6 +18,7 @@ public class RecordController {
 
     @Autowired
     private RecordService recordService;
+    private int displayNumber = 0;
 
     // Method to get all records and display them on the homepage
     @GetMapping("/")
@@ -30,8 +31,15 @@ public class RecordController {
     // Method to update the 'owned' field of a record
     @PostMapping("/updateOwned/{id}/{owned}")
     public ResponseEntity<Record> updateOwned(@PathVariable("id") int id, @PathVariable("owned") int owned) {
-        Record record = recordService.updateOwned(id, owned);
+        Record record = recordService.updateOwned(id, owned, this.displayNumber);
 
         return new ResponseEntity<>(record, HttpStatus.OK); // Redirect back to the homepage to refresh the data
+    }
+
+    @PostMapping("/setDisplayNumber")
+    public ResponseEntity<Integer> setDisplayNumber(int number, Model model) {
+        this.displayNumber = number; // Update the number
+        model.addAttribute("displayNumber", displayNumber);
+        return new ResponseEntity<>(number, HttpStatus.OK);
     }
 }
