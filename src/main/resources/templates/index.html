@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-<div id="top-left-number" style="position: absolute; top: 10px; right: 10px; font-size: 1.5rem; font-weight: bold; color: green;">
+<div id="top-left-number" style="position: fixed; top: 5px; right: 10px; font-size: 1.5rem; font-weight: bold; color: green;">
   <span id="display-number" th:text="${displayNumber}">0</span>
 </div>
 
 <!-- Button to set the value -->
-<div style="position: absolute; top: 50px; right: 10px;">
+<div style="position: fixed; top: 30px; right: 10px;">
   <input type="number" id="new-value" placeholder="Enter new value" style="width: 100px; font-size: 1rem;">
   <button onclick="updateDisplayNumber()">Set Value</button>
 </div>
